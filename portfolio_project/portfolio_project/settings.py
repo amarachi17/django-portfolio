@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# Email config
+# Secure Email configuration
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.getenv('EMAIL_HOST')
