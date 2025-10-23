@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Confidence Nkeonye | Portfolio {% endblock %}</title>
+    <link rel="stylesheet" href="{% {% static 'css/style.css' %}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="{% url 'home' %}">Confidence Nkeonye</a></h1>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'contact %'}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>{{ now|date: "Y" }} Confidence Nkeonye. All Rights Reserved.  </p>
+    </footer>
+</body>
+</html>
