@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Contact | Confidence Nkeonye {% endblock %}
+
+
+{% block content %}
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <p>If you'd like to work with me or have any questions, please send a message. </p>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Send Message</button>
+        </form>
+        
+        {% if messages %}
+            
+            {% for message in messages %}
+                <p class="success">{{ message }}</p>
+            {% endfor %}
+                
+        {% endif %}
+            
+    </section>
+{% endblock %}
+    
