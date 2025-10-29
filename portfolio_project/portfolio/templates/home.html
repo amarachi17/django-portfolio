@@ -1,19 +1,42 @@
 {% extends 'base.html '%}
-
+{% load static %}
 {% block title %}Home | Confidence Nkeonye {% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h2>Hello, I'm <span>Confidence Nkeonye </span> </h2>
-    <p> A Backend Developer skilled in Python, Django, Flask, and REST APIs. </p>
+<section class="intro">
+    <h1> Welcome to My Portfolio </h1>
+    <p> I'm Confidence Nkeonye - A Backend Developer skilled in Python, Django, Flask, Java, SQL,
+         and REST APIs. </p>
 </section>
 
 <section class="projects">
-    <h3> Featured Projects </h3>
-    <ul>
+    <h2> My Projects </h2>
+    <div class="project-list">
+        {% for project in projects %}
+        <div class="project">
+            {% if project.image %}
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            {% endif %}
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <p><strong>Tech Stack:</strong> {{ project.tech_stack }}</p>
+
+            {% if project.github_link %}
+            <a href="{{ project.github_link }}" target="_blank"> GitHub </a>
+            {% endif %}
+
+            {% if project.live_demo %}
+            <a href="{{ project.live_demo }}" target="_blank">Live Demo</a>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>No projects added yet. Add some via the admin panel.</p>
+        {% endfor %}
+    </div>
+    <!-- <ul>
         <li> <strong> Social Media API </strong>- Built with Django REST Framework </li>
         <li> <strong> Weekly To-Do API</strong> - Personal productivity API </li>
         <li> <strong>Real Estate Software </strong>- Final Year Award-Winning Project </li>
-    </ul>
+    </ul> -->
 </section>
 {% endblock %}
