@@ -6,8 +6,14 @@
 
 {% block content %}
     <section class="contact">
-        <h2>Get in Touch</h2>
-        <p>If you'd like to work with me or have any questions, please send a message. </p>
+        <h2>Contact Me</h2>
+         
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Send Message</button>
+        </form>
+        <!-- <p>If you'd like to work with me or have any questions, please send a message. </p>
 
         <form action="" method="POST">
             {% csrf_token %}
@@ -21,7 +27,7 @@
                 <p class="success">{{ message }}</p>
             {% endfor %}
                 
-        {% endif %}
+        {% endif %} -->
             
     </section>
 {% endblock %}
