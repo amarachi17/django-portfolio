@@ -9,7 +9,7 @@ def home(request):
     return render(request, 'home.html', {'projects': projects})
 
 def contact(request):
-    form = ContactForm(request.POST or none)
+    form = ContactForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
         name = form.cleaned_data['name']
         email = form.cleaned_data['email']
