@@ -20,6 +20,7 @@ def contact(request):
             message= f'From: {email}\n\n{message}',
             from_email = settings.EMAIL_HOST_USER,
             recipient_list = [settings.EMAIL_HOST_USER],
+            fail_silently = False,
         )
         return redirect('home')
     return render(request, 'contact.html', {'form': form})
