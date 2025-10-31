@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+header{
+    background-color: #222;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    /* background: #111;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+header h2{
+    display: inline-block;
+    color: white;
+    margin: 0;
+}
+
+header ul{
+    float: right;
+    color: white;
+    margin-top: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+header li{
+    display: inline;
+    margin-left: 20px;
+    
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+nav li{
+   
+    float: right;
+}
+nav a{
+    color: #00aced;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+/* ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.hero span{
+    color: #0078ff;
+}
+.projects{
+    padding: 20px;
+} */
+section{
+    padding: 2em;
+    text-align: center;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    padding: 2em;
+}
+
+.project{
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
