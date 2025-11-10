@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Confidence Nkeonye | Portfolio {% endblock %}</title>
+    <title>{% block title %} Confidence Nkeonye | Backend Developer {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body>
+<body class="font-sans bg-gray-100">
     <header>
         <nav>
             <h1><a href="{% url 'home' %}">Confidence Nkeonye</a></h1>
