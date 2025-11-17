@@ -28,7 +28,15 @@
                 <button type="submit" class="bg-blue-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition">
                     Send Message
                 </button>
-                
+                {% if success %}
+                <div class="text-blue-700 py-3 px-4 rounded-lg mb-8"> 
+                    Your message has been sent successfully! ✅
+                </div>
+                {% endif %}
+            </form>
+        </div>
+        
+        
         <!-- <p>If you'd like to work with me or have any questions, please send a message. </p>
 
         <form action="" method="POST">
