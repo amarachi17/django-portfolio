@@ -15,12 +15,19 @@ def contact(request):
         email = form.cleaned_data['email']
         message = form.cleaned_data['message']
 
+        full_message = f"""
+        New message from your portfolio site:
+        Name: {name}
+        Email: {email}
+
+        Message: {message} """
+
         send_mail(
             subject = f'Porfolio Message from {name}',
-            message= f'From: {email}\n\n{message}',
+            message= full_message,
             from_email = settings.EMAIL_HOST_USER,
             recipient_list = [settings.EMAIL_HOST_USER],
             fail_silently = False,
         )
-        return redirect('home')
+        return render(request, "contact.html", {"form": ContactForm(), "success":True})
     return render(request, 'contact.html', {'form': form})
