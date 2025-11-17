@@ -13,11 +13,11 @@
         <div class="max-w-xl mx-auto bg-gray-50 shadow-md rounded-xl p-8">
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-        
+                <div class="mb-4">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+             
         <!-- <p>If you'd like to work with me or have any questions, please send a message. </p>
 
         <form action="" method="POST">
