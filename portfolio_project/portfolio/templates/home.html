@@ -58,6 +58,12 @@
             <p class="text-sm text-gray-500 mb-3"> Stack: {{ project.tech_stack }} </p>
 
             
+            {% if project.github_link %}
+                <a href="{{ project.github_link }}"  class="text-blue-700 font-semibold hover:underline" target="_blank">
+                    View on GitHub
+                </a>
+            {% endif %}
+                        
             
                 
                 
