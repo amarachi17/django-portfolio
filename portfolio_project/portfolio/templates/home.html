@@ -49,6 +49,10 @@
 
         {% for project in projects %}
         <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+            {% if project.image %}
+                <img src="{{ project.image.url }}" alt="" class="rounded-lg mb-4">
+            {% endif %}
+
             
                 
         </div>
