@@ -64,7 +64,9 @@
                 </a>
             {% endif %}
                         
-            
+            {% if project.live_demo %}
+                <a href="{{ project.live_demo }}"  target="_blank" class="text-blue-700 font-semibold hover:underline block mt-2">Live Demo</a>
+            {% endif %}
                 
                 
         </div>
