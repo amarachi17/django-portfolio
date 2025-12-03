@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 from .models import Project
 from .forms import ContactForm
@@ -31,3 +31,8 @@ def contact(request):
         )
         return render(request, "contact.html", {"form": ContactForm(), "success":True})
     return render(request, 'contact.html', {'form': form})
+
+def project_detail(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    images = project.images.all()
+    return render(request, "project_detail.html", {"project": project, "images": images})
